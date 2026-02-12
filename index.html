@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Coach Premium</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">CYBER COACH</div>
+  <div class="level" id="levelBadge">Fondation</div>
+</header>
+
+<main>
+
+<section id="dashboard">
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Modules validés</div>
+      <div class="stat-value" id="validatedCount">0 / 10</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Score moyen</div>
+      <div class="stat-value" id="avgScore">—</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Progression</div>
+      <div class="stat-value" id="globalProgress">0%</div>
+    </div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <h2>Modules</h2>
+  <div class="modules-grid" id="modulesGrid"></div>
+
+</section>
+
+<section id="moduleView" class="hidden">
+
+  <button class="back" onclick="goBack()">← Retour</button>
+
+  <h2 id="moduleTitle"></h2>
+
+  <div class="module-content">
+
+    <div class="lessons">
+      <h3>Leçons</h3>
+      <ul id="lessonsList"></ul>
+    </div>
+
+    <div class="evaluation">
+      <h3>Évaluation finale</h3>
+
+      <label>Compréhension (/5)</label>
+      <input type="number" id="scoreC" min="0" max="5">
+
+      <label>Cas pratique (/10)</label>
+      <input type="number" id="scoreP" min="0" max="10">
+
+      <label>Simulation dirigeant (/5)</label>
+      <input type="number" id="scoreD" min="0" max="5">
+
+      <div class="total">
+        Total : <span id="totalScore">—</span>
+      </div>
+
+      <button class="validate" onclick="validateModule()">Valider le module</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+Cyber Coach – Consultant Premium 2026
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
